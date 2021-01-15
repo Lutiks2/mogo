@@ -1,0 +1,16 @@
+@import "base/fonts";
+@import "base/variables";
+@import "mixins/fluid-font-size";
+@import "mixins/decor-line";
+@import "base/base";
+
+@import "layout/header";
+@import "layout/footer";
+@import "layout/search";
+
+@import "pages/about/welcome.scss";
+@import "pages/about/what-we-do.scss";
+@import "pages/about/team-section.scss";
+@import "pages/about/latest-posts.scss";
+
+@import "pages/team/team.scss";

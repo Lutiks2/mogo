@@ -1,0 +1,186 @@
+html {
+    font-family: $regularFont;
+    scroll-behavior: smooth;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    overflow-x: hidden;
+    @include fluid-type(18px, 24px);
+    color: $dark-font-color;
+    letter-spacing: 0;
+    line-height: 28px;
+    @media all and (min-width: 1000px) {
+        line-height: 36px;
+    }
+    background-color: white;
+    margin: 0;
+
+    img {
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+            width: 100%;
+        }
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+span, p, h1, h2, h3, h4, h5, h6, i, time, address, button {
+    margin: 0;
+    padding: 0;
+}
+
+a:link, a:visited, a:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button {
+    padding: 0;
+    border: none;
+    outline: none;
+    font: inherit;
+    color: inherit;
+    background: none;
+    cursor: pointer;
+}
+
+ul {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-left: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.wrap-heading {
+    position: relative;
+    color: $dark-font-color;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    &:after {
+        @include decor-line;
+        background: $decor-color;
+    }
+
+    @media all and (min-width: 768px) {
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+        text-align: center;
+        &:after {
+            left: 50%;
+            margin-left: -30px;
+        }
+    }
+    @media all and (min-width: 1200px) {
+        margin-bottom: 45px;
+        padding-bottom: 40px;
+    }
+}
+
+.subheading {
+    @include fluid-type(20px, 24px);
+    font-weight: 600;
+    line-height: 1.2;
+    font-family: $handwritingFont;
+    padding-bottom: 10px;
+    display: inline-block;
+    @media all and (min-width: 1200px) {
+        padding-bottom: 15px;
+    }
+}
+
+.heading {
+    @include fluid-type(25px, 30px);
+    font-weight: 600;
+    line-height: 1.5;
+    font-family: $boldFont;
+    text-transform: uppercase;
+}
+
+.section-description {
+    color: $assent-font-color;
+    margin-bottom: 30px;
+    @include fluid-type(13px, 15px);;
+    @media all and (min-width: 768px) {
+        width: 82.92%;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    @media all and (min-width: 992px) {
+        margin-bottom: 60px;
+    }
+    @media all and (min-width: 1200px) {
+        margin-bottom: 80px;
+    }
+    @media all and (min-width: 1400px) {
+        margin-bottom: 90px;
+    }
+}
+
+h3 {
+    @include fluid-type(12px, 14px);
+    font-weight: 600;
+    line-height: 1.17;
+    font-family: $headingFont;
+    text-transform: uppercase;
+    color: $dark-font-color;
+}
+
+.container {
+    padding: 0;
+    max-width: 89.5% !important;
+    @media (min-width: 1440px) {
+        max-width: 1200px !important;
+    }
+}
+
+.section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    @media all and (min-width: 768px) {
+        padding-top: 60px;
+        padding-bottom: 64px;
+    }
+    @media all and (min-width: 1200px) {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    @media all and (min-width: 1400px) {
+        padding-top: 110px;
+        padding-bottom: 110px;
+    }
+}
+
+.section-heading {
+    padding-bottom: 30px;
+    @media all and (min-width: 768px) {
+        padding-bottom: 48px;
+        text-align: center;
+    }
+    @media all and (min-width: 1200px) {
+        padding-bottom: 64px;
+    }
+    @media all and (min-width: 1400px) {
+        padding-bottom: 92px;
+    }
+}
+
+*:hover {
+    transition: all 0.5s ease;
+}
+
+*, *:focus, *:hover {
+    outline: none;
+}
+
+.wrap-pagination {
+    margin-bottom: 50px;
+}
+
+

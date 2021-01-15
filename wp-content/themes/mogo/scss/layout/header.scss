@@ -1,0 +1,220 @@
+.site {
+    position: relative;
+    //background-color: #00d084;
+}
+
+.site-header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 13px;
+    z-index: 3;
+    @media all and (min-width: 768px) {
+        height: 40px;
+    }
+    @media all and (min-width: 1700px) {
+        top: 60px;
+    }
+}
+
+.header-container {
+    max-width: 89.5%!important;
+    @media (min-width: 1440px) {
+        //max-width: 91.666%!important;
+        //max-width: 85.71%!important;
+        max-width: 1200px!important;
+    }
+    margin: 0 auto;
+}
+
+.header-block {
+    display: flex;
+    justify-content: space-between;
+}
+
+//mobile menu
+
+.header-navigation {
+    display: none;
+    position: absolute;
+    left: 0;
+    background: $decor-color;
+    right: 0;
+    top: -35px;
+    height: 100vh;
+    padding-top: 85px;
+    text-align: center;
+    a {
+        color: $light-font-color;
+    }
+    @media all and (min-width: 768px) {
+        height: 40px;
+        display: flex;
+        position: inherit;
+        background: none;
+        padding-top: 0;
+        li {
+            margin-left: 60px;
+        }
+    }
+    @media all and (min-width: 1400px) {
+        li {
+            margin-left: 87px;
+        }
+    }
+
+}
+
+.custom-logo {
+    width: 75%;
+    @media (min-width: 768px) {
+        width: 100%;
+    }
+}
+
+///burger menu
+.menu-btn {
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    @media all and (min-width: 768px) {
+        display: none;
+    }
+}
+
+.menu-btn span,
+.menu-btn span:before,
+.menu-btn span:after {
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    top: 50%;
+    left: 50%;
+    margin-left: -10px;
+    margin-top: -1px;
+    //margin-bottom: -2px;
+    background-color: $assent-color;
+}
+
+.btn-bg {
+    background-color: #000 !important;
+    &:before {
+        background-color: #000 !important;
+    }
+    &:after {
+        background-color: #000 !important;
+    }
+}
+
+.menu-btn span:before,
+.menu-btn span:after {
+    content: '';
+    display: block;
+    transition: 0.5s;
+}
+
+.menu-btn span:before {
+    transform: translateY(-5px);
+}
+
+.menu-btn span:after {
+    transform: translateY(5px);
+}
+
+.menu-btn_active {
+    background-color: $decor-color;
+}
+
+.menu-btn_active span {
+    height: 0;
+}
+
+.menu-btn_active span:before {
+    transform: rotate(45deg);
+    background-color: $assent-color !important;
+}
+
+.menu-btn_active span:after {
+    transform: rotate(-45deg);
+    background-color: $assent-color !important;
+}
+
+.but-menu {
+    padding-bottom: 9px;
+    right: 0;
+    position: absolute;
+    padding-top: 0;
+    top: -4px;
+    z-index: 7;
+    @media all and (min-width: 1100px) {
+        padding-top: 11px;
+    }
+
+}
+
+.menu-item {
+    padding-bottom: 15px;
+    @media all and (min-width: 992px) {
+        padding-bottom: 0;
+    }
+}
+
+.menu-item a {
+    text-transform: uppercase;
+    font-size: 18px;
+    &:hover {
+        transition: all 0.25s ease-in-out;
+        color: $hover-font-color;
+    }
+    @media all and (min-width: 768px) {
+        position: relative;
+        font-size: 14px;
+        &:hover:after {
+            transition: all 0.25s ease-in-out;
+            position: absolute;
+            content: '';
+            height: 3px;
+            width: 100%;
+            bottom: -10px;
+            left: 0;
+            background-color: $hover-font-color;
+        }
+    }
+}
+
+.current-menu-item a {
+    color: $hover-font-color;
+    &:after {
+        transition: all 0.25s ease-in-out;
+        position: absolute;
+        content: '';
+        height: 3px;
+        width: 100%;
+        bottom: -10px;
+        left: 0;
+        background-color: $hover-font-color;
+    }
+}
+
+//end button menu
+
+.menu {
+    @media all and (min-width: 768px) {
+        display: flex;
+    }
+}
+
+.more-nav {
+    display: none;
+    @media all and (min-width: 992px) {
+        position: relative;
+        display: flex;
+    }
+}
+
+//header dark
+
+.header-dark {
+    background-color: $decor-color;
+}

@@ -1,0 +1,9 @@
+@mixin decor-line {
+    position: absolute;
+    content: '';
+    width: 60px;
+    height: 3px;
+    //background: $decor-color;
+    bottom: 0;
+    left: 0;
+}

@@ -1,0 +1,54 @@
+.accordion-section {
+    max-height: 393px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.whatwedo-image {
+    @media all and (min-width: 768px) {
+        margin-bottom: 0;
+        height: 100%;
+    }
+}
+.collapse {
+    height: 180px;
+    overflow-y: auto;
+}
+
+.card {
+    margin-bottom: 10px;
+}
+
+.card-header {
+    padding: 15px;
+    background: none;
+ }
+
+.card-header-heading {
+    padding-left: 15px;
+ }
+
+.accordion-wrap {
+    display: flex;
+    align-items: center;
+}
+
+.card-body {
+    padding-bottom: 20px;
+}
+
+.card-description {
+    color: $assent-font-color;
+    line-height: 24px;
+font-family: $regularFont;
+    @include fluid-type(12px, 15px);
+}
+
+.accordion .card:first-of-type,
+.accordion .card:not(:first-of-type):not(:last-of-type) {
+    border-bottom: 1px solid rgba(0,0,0,.125)
+}
+
+.accordion .card:last-of-type {
+    margin-bottom: 0;
+}

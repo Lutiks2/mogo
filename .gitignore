@@ -1,0 +1,8 @@
+.htaccess
+.idea
+.html
+.DS_Store
+ai1wm-backups
+*.html
+wp-content/themes/mogo/node_modules
+wp-config.php

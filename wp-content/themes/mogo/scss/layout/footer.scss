@@ -1,0 +1,13 @@
+.footer {
+    background-color: $assent-color;
+    @media all and (min-width: 992px) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+
+.footer-info {
+    @media all and (min-width: 768px) {
+    text-align: center;
+    }
+}

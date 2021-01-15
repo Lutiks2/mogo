@@ -1,0 +1,199 @@
+.welcome {
+    position: relative;
+}
+
+//slider on back
+.swiper-container {
+    width: 100%;
+    //height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gallery-top .swiper-slide {
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(to bottom, rgba(231, 129, 130, 0.9), rgba(238, 215, 137, 0.9));
+    }
+
+    @media all and (min-width: 768px) {
+        height: 90vh;
+    }
+    @media all and (min-width: 1020px) {
+        height: 110vh;
+    }
+    @media all and (min-width: 1600px) {
+        height: 100vh;
+    }
+}
+
+.gallery-top {
+    //height: 80%;
+    width: 100%;
+}
+
+//end slider on back
+
+//slider-thumbs on front
+.gallery-thumbs {
+    height: 20%;
+    box-sizing: border-box;
+    padding: 10px 0;
+    margin-top: 50px;
+    display: none;
+    @media all and (min-width: 768px) {
+        display: block;
+    }
+}
+
+.gallery-thumbs .swiper-slide {
+    width: 25%;
+    height: 100%;
+    opacity: 0.4;
+    cursor: pointer;
+    text-align: left;
+    border-top: 3px solid white;
+    position: relative;
+    color: $light-font-color;
+}
+
+.gallery-thumbs .swiper-slide-thumb-active {
+    opacity: 1;
+
+    &:after {
+        position: absolute;
+        content: '';
+        width: 70px;
+        height: 3px;
+        background-color: $decor-color;
+        top: -3px;
+    }
+}
+
+.thumbs {
+    padding-top: 20px;
+}
+
+.slide-number {
+    font-family: $boldFont;
+}
+
+.slide-text {
+    font-size: 14px;
+    font-family: $regularFont;
+    text-transform: uppercase;
+}
+
+//end slider-thumbs on front
+
+//block with text on front
+.welcome-block {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    @media all and (min-width: 576px) {
+        text-align: center;
+    }
+}
+
+.welcome-subheading {
+    margin-bottom: 20px;
+    padding-top: 70px;
+    @include fluid-type(40px, 72px);
+    font-weight: 400;
+    line-height: 1.2;
+    font-family: $handwritingFont;
+    color: $light-font-color;
+    @media all and (min-width: 576px) {
+        padding-top: 7vw;
+        margin-bottom: 30px;
+    }
+    @media all and (min-width: 1600px) {
+        margin-bottom: 40px;
+        padding-top: 230px;
+    }
+}
+
+.welcome-heading {
+    position: relative;
+    margin-bottom: 35px;
+    padding-bottom: 30px;
+    @include fluid-type(45px, 150px);
+    font-weight: 500;
+    line-height: 1;
+    font-family: $boldFont;
+    color: $light-font-color;
+
+    &:after {
+        @include decor-line;
+        background-color: $light-font-color;
+    }
+
+    @media all and (min-width: 431px) {
+        max-width: 63%;
+    }
+    @media all and (min-width: 576px) {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 40px;
+        padding-bottom: 2vw;
+        &:after {
+            left: 50%;
+            margin-left: -30px;
+        }
+    }
+    @media all and (min-width: 768px) {
+        max-width: 57%;
+    }
+    @media all and (min-width: 1400px) {
+        padding-bottom: 70px;
+        margin-bottom: 50px;
+    }
+}
+
+.btn-wrap {
+    @media all and (min-width: 1400px) {
+        padding-top: 20px;
+    }
+}
+
+.welcome-btn {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 3px solid $light-font-color;
+    @include fluid-type(10px, 14px);
+    font-family: $boldFont;
+    font-weight: 500;
+    line-height: 1.2;
+    color: $light-font-color;
+    text-transform: uppercase;
+
+    &:hover {
+        color: $decor-color;
+        border: 3px solid $decor-color;
+    }
+
+    @media all and (min-width: 768px) {
+        max-width: 154px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}
+

@@ -1,0 +1,50 @@
+//for page
+.search-page {
+    padding-top: 150px;
+}
+
+.search-page-non {
+    padding-bottom: 200px;
+}
+
+//for form
+.searching {
+    display: none;
+    position: absolute;
+    top: 43px;
+    right: 0;
+    left: 0;
+    text-align: center;
+}
+
+.search-wrap {
+    display: flex;
+}
+
+.searching-text {
+    border: 1px solid;
+    padding: 3px;
+}
+
+.searching-submit {
+    margin-left: -5px;
+    background-color: $decor-color;
+    border: 1px solid $decor-color;
+    color: $light-font-color;
+    transition: all 0.5s ease;
+    &:hover {
+        background-color: $light-font-color;
+        color: $decor-color;
+        transition: all 0.5s ease;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+@media all and (min-width: 768px) {
+    .searching {
+        left: inherit;
+        right: 33px;
+    }
+}
